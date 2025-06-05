@@ -5,4 +5,5 @@
 
 File Modifications: To expand the domain of the function, find the 'x' variable and adjust either bound (-0.5, 3.0), if these bounds are changed, the bounds of x_samp must reflect the changes as well. Additionally, if you want to alter the coefficients of the objective function, their random generation bounds can be found the 'helper_fncs' file in the function 'create_objective_function()' (the coefficients are a,b,c respectively). To achieve more iterations of BO, change the value of the constant BUDGET. Graphs can be enabled or disabled by commenting out lines in the loop and changed which plots are pushed to the 'plots' variable. Just ensure that the layout of the graphs reflects and changes that are made (the dimensions of the graph image can be adjusted, by default it is (6000, 8000)). To save a graph, input savefig("file_name") and it will save your latest graph. Lastly, for the acquisition functions 'expected_improvement' and 'upper_confidence_bound' the parameter 'ζ' controls the exploration vs. exploitation constant and can be changed.
 
-![example_output](https://github.com/user-attachments/assets/e2553864-2d97-44fd-ab9e-4ba651f8da13)
+
+![example_output](https://github.com/user-attachments/assets/5fc8bc7a-4316-4f2e-ac3c-96521c1044ea)
