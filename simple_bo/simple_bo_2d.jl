@@ -3,7 +3,7 @@ using Distributions
 using GaussianProcesses
 using Plots
 
-include("helper_fncs")
+include("helper_fncs.jl")
 BUDGET = 10 # Number of iterations that will be done with this implementation of BO
 
 # Gets the objective function so we can check our values at the end
