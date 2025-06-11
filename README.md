@@ -1,5 +1,5 @@
 # simple-2d-bayesian-opt
-**DEPENDENCIES: Measures.jl, Plots.jl, Distributions.jl, GaussianProcesses.jl, LaTeXStrings.jl**
+**DEPENDENCIES: Measures.jl, Plots.jl, Distributions.jl, GaussianProcesses.jl**
 
 **Goal: Creates an anonymous 2d objective function and using Bayesian optimization, finds the global optima of the objective function on a given domain with varying acquisition methods.**
 
