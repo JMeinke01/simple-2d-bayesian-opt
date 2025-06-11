@@ -1,6 +1,5 @@
 using Distributions
 using GaussianProcesses
-using LaTeXStrings
 
 #Defining our objective function to check accuracy of guess later:
 function create_objective_function() 
