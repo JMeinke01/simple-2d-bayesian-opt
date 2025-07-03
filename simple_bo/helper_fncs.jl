@@ -35,7 +35,7 @@ function upper_confidence_bounds(X, GP; ζ = 25.0) # This value of ζ is more ge
 end   
 
 #Given an acquisition function, propose the next best sampling location
-function best_sampling_point(acq_func, GP, X, 𝒟, f_obj) 
+function best_sampling_point(acq_func, X, 𝒟, f_obj) 
         samp_pt = findmax(acq_func)
         new_x = X[samp_pt[2]]
         new_y = f_obj(new_x)
