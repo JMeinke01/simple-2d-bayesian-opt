@@ -31,7 +31,7 @@ function main(X, 𝒟_ei, 𝒟_ucb, GP_ei, GP_ucb, f_obj, squared_exponential, m
         show_legend = i == 1
         exp_imp = expected_improvement(X, 𝒟_ei, GP_ei)
         p_acq_ei = plot(X, exp_imp, label = show_legend ? "Expected Improvement Acquisition" : "", left_margin = 35mm, legend = show_legend ? :topright : false)
-        𝒟_ei = best_sampling_point(exp_imp, GP_ei, X, 𝒟_ei, f_obj)
+        𝒟_ei = best_sampling_point(exp_imp, X, 𝒟_ei, f_obj)
         GP_ei = GP(𝒟_ei[1], 𝒟_ei[2], m, squared_exponential)
         p_gp_ei = plot(GP_ei; label = show_legend ? "Expected Improvement Surrogate Function" : "", left_margin = 30mm,  top_margin = 10mm, title = "Iteration $i", legend = show_legend, obsv = false)
         plot!(p_gp_ei, x, y, label = show_legend ? "Objective Function" : "", legend = show_legend)
@@ -40,7 +40,7 @@ function main(X, 𝒟_ei, 𝒟_ucb, GP_ei, GP_ucb, f_obj, squared_exponential, m
         
         ucb = upper_confidence_bounds(X, GP_ucb)
         p_acq_ucb = plot(X, ucb, label = show_legend ? "Upper Confidence Bound Acquisition" : "", legend = show_legend ? :topright : false)
-        𝒟_ucb = best_sampling_point(ucb, GP_ucb, X, 𝒟_ucb, f_obj)
+        𝒟_ucb = best_sampling_point(ucb, X, 𝒟_ucb, f_obj)
         GP_ucb = GP(𝒟_ucb[1], 𝒟_ucb[2], m, squared_exponential)
         p_gp_ucb = plot(GP_ucb; label = show_legend ? "Upper Confidence Bound Surrogate Function" : "", left_margin = 30mm,  top_margin = 10mm, title = "Iteration $i", legend = show_legend, obsv = false)
         plot!(p_gp_ucb, x, y, label = show_legend ? "Objective Function" : "", legend = show_legend)
